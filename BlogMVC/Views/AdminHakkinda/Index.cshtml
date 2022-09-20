@@ -1,0 +1,37 @@
+﻿@model IEnumerable<BlogMVC.Models.Hakkinda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Hakkında Sayfası İşlemleri</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HakkindaBaslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HakkindaIcerik)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HakkindaBaslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HakkindaIcerik)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.HakkindaID }) |
+            @Html.ActionLink("Detay", "Details", new { id=item.HakkindaID }) |
+        </td>
+    </tr>
+}
+
+</table>

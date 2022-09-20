@@ -1,0 +1,42 @@
+﻿@model BlogMVC.Models.Uye
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Uye Detayları</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UyeAdSoyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UyeAdSoyad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UyeMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UyeMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UyeSifre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UyeSifre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.UyeID }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

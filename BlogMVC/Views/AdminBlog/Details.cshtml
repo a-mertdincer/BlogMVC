@@ -1,0 +1,67 @@
+﻿@model BlogMVC.Models.Blog
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Blog Detayı</h2>
+
+<div>
+    <h4>Blog</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogBaslik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlogBaslik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogIcerik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlogIcerik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogFoto)
+        </dt>
+
+        <dd>
+            <img class="img-responsive" src="@Model.BlogFoto" width="80"/>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogOkunmaSayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlogOkunmaSayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogOkunmaSuresi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlogOkunmaSuresi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogTarih)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlogTarih)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.BlogId }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

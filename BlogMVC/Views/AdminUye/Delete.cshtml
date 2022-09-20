@@ -1,0 +1,47 @@
+﻿@model BlogMVC.Models.Uye
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Uye Silme</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UyeAdSoyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UyeAdSoyad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UyeMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UyeMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UyeSifre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UyeSifre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Geri Dön", "Index")
+        </div>
+    }
+</div>
